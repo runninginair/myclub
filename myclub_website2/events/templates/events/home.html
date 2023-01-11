@@ -1,0 +1,25 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+	<center>
+	<h1> Hello {{ first_name }}'s Django World! </h1>
+		{{ month }} {{ year }}
+
+	<h2> Welcome to {{ first_name }}'s Events for {{ month_number }} {{ year }} </h2>
+
+		As of {{ time }}
+		<br/>
+		By it {{ time_2 }}
+
+		<br/><br/><br/>
+
+		{{ cal | safe }}
+
+		<br/><br/><br/>
+
+	Copyright (c) {{ current_year }}
+
+	</center>
+
+{% endblock %}

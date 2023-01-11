@@ -1,0 +1,47 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+
+	<!-- <h1> {{ venue }} </h1> -->
+<!-- 	<br/><br/>
+	{{ venue.address }}<br/>
+	{{ venue.zip_code }}<br/>
+	{{ venue.phone }}<br/>
+	{{ venue.email_address }}<br/>
+	<a href="{{ venue.web }}">{{ venue.web }}</a><br/> -->
+
+	<h1> Venue Infomation</h1>
+
+<div class="card">
+  <div class="card-header">
+    <!-- Featured -->
+    <h4>{{ venue }}</h4>
+  </div>
+  <div class="card-body">
+    <!-- <h5 class="card-title">{{ venue }}</h5> -->
+    <p class="card-text">
+
+	    <ul>
+		<li><strong>Addres:</strong> {{ venue.address }}</li>
+		<li><strong>Zip code:</strong> {{ venue.zip_code }}</li>
+		<li><strong>Phone:</strong> {{ venue.phone }}</li>
+		<li><strong>Email:</strong> {{ enue.email_address }}</li>
+		<li><strong>Website:</strong> <a href="{{ venue.web }}">{{ venue.web }}</a><br/> 
+			{% for user in event.attendees.all %}
+
+		{{ user }} <br/>
+			{% endfor %}
+		</li>
+		</ul>
+
+    </p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+
+
+	<br/>
+
+
+{% endblock %}
